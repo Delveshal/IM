@@ -216,8 +216,7 @@ func cln(srvAddr string) {
 			fmt.Println(err.Error())
 			continue
 		}
-		for i := 0; i < 1000; i++ {
-			clnSck.Write(me.dataBuf)
+		clnSck.Write(me.dataBuf)
 		}
 	}
 	clnSck.Close()
